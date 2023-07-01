@@ -1,0 +1,1 @@
+This repo is a CRUD project from [www.frontendmentor.io](https://www.frontendmentor.io/) called 'Interactive comments section' which requires the use of HTML, CSS and JavaScript or any Frontend framework of your choice, i will be using React. For information about the project click [Here](https://www.frontendmentor.io/challenges/interactive-comments-section-iG1RugEG9).
