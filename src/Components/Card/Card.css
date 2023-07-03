@@ -1,0 +1,10 @@
+.card {
+  width: 100%;
+  display: flex;
+}
+.header-container {
+  display: flex;
+}
+.reply-btn-mobile {
+  display: none;
+}

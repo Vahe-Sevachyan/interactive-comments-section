@@ -1,6 +1,7 @@
+import "./CardHeader.css";
 const CardHeader = (props) => {
   return (
-    <div>
+    <div className="card-header">
       <img src={props.img} alt="" />
       <span> {props.name}</span>
       <span>{props.commentDate}</span>

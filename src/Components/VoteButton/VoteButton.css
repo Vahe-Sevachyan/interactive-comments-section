@@ -1,0 +1,6 @@
+.btnContainer {
+  display: flex;
+  flex-direction: column;
+  border: red 1px dotted;
+  width: 20px;
+}
