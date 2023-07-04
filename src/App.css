@@ -6,4 +6,10 @@
 }
 .card-btn-wrapper {
   display: flex;
+  flex-direction: row-reverse;
 }
+/* active in mobile layout */
+
+/* #mobile-layout{
+  flex-direction: column;
+} */
