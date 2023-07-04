@@ -2,9 +2,6 @@
   width: 100%;
   display: flex;
 }
-.header-container {
-  display: flex;
-}
 
 p {
   border: red dotted 1px;

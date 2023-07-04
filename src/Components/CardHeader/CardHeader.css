@@ -14,3 +14,6 @@
 .avatar-name {
   margin-right: 10px;
 }
+.card-header-wrapper {
+  display: flex;
+}
