@@ -2,15 +2,15 @@ import CardHeader from "../CardHeader/CardHeader";
 import amyrobson from "../../assets/avatars/amyrobson.png";
 import "./Card.css";
 import VoteButton from "../VoteButton/VoteButton";
-import ReplyButton from "../ReplyButton/ReplyButton";
+import MobileReplyBtn from "../ReplyButton/MobileReplyBtn";
+import DesktopReplyBtn from "../ReplyButton/DesktopReplyBtn";
 const Card = () => {
   return (
     <div className="card">
-      <div className="vote-btn-container">
+      <div className="btn-container">
         <VoteButton />
-        <div className="reply-btn-mobile">
-          <ReplyButton />
-        </div>
+
+        <MobileReplyBtn />
       </div>
 
       <div className="content-wrapper">
@@ -20,9 +20,7 @@ const Card = () => {
             img={amyrobson}
             commentDate="1 month ago"
           />
-          <div className="reply-btn-desktop">
-            <ReplyButton />
-          </div>
+          <DesktopReplyBtn />
         </div>
 
         <p>
