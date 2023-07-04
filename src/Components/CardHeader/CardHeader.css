@@ -4,7 +4,7 @@
   justify-content: flex-start;
   align-items: center;
   width: 300px;
-  border: 1px dotted red;
+  /* border: 1px solid purple; */
   margin-right: 35px;
 }
 .avatar-img {
@@ -16,4 +16,6 @@
 }
 .card-header-wrapper {
   display: flex;
+  align-items: center;
+  border: 1px solid black;
 }
