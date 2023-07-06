@@ -15,9 +15,10 @@ function App() {
             userImg={amyrobson}
             commentDate="1 month ago"
           />
+
           <CommentComponent comment=" Impressive! Though it seems the drag feature could be improved. But overall it looks incredible. You nailed the design and the responsiveness at various breakpoints works really well." />
         </Card>
-        <ButtonContainer />
+        <ButtonContainer initialValue={0} />
       </div>
       <div className="card-btn-wrapper" id="mobile-layout">
         <Card>
@@ -28,7 +29,7 @@ function App() {
           />
           <CommentComponent comment=" Impressive! Though it seems the drag feature could be improved. But overall it looks incredible. You nailed the design and the responsiveness at various breakpoints works really well." />
         </Card>
-        <ButtonContainer />
+        <ButtonContainer initialValue={5} />
       </div>
       <div className="card-btn-wrapper" id="mobile-layout">
         <Card>
@@ -39,7 +40,7 @@ function App() {
           />
           <CommentComponent comment=" Impressive! Though it seems the drag feature could be improved. But overall it looks incredible. You nailed the design and the responsiveness at various breakpoints works really well." />
         </Card>
-        <ButtonContainer />
+        <ButtonContainer initialValue={10} />
       </div>
     </div>
   );

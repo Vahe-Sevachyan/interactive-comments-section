@@ -2,5 +2,6 @@
   display: flex;
   flex-direction: column;
   border: red 1px dotted;
+  align-items: center;
   width: 20px;
 }
