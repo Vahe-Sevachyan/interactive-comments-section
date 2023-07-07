@@ -5,7 +5,6 @@ const ButtonContainer = ({ initialValue }) => {
   return (
     <div>
       <VoteButton initialValue={initialValue} />
-
       <MobileReplyBtn />
     </div>
   );

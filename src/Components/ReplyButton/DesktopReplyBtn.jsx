@@ -1,11 +1,11 @@
 import "./DesktopReplyBtn.css";
 import replyImg from "../../assets/icons/icon-reply.svg";
-const DesktopReplyBtn = () => {
+const DesktopReplyBtn = ({ handleReplyClick }) => {
   return (
-    <div className="">
+    <button onClick={handleReplyClick}>
       <img src={replyImg} alt="" className="reply" />
       Reply
-    </div>
+    </button>
   );
 };
 
