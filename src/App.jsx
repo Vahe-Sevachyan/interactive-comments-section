@@ -5,6 +5,7 @@ import CardHeader from "./Components/CardHeader/CardHeader";
 import CommentComponent from "./Components/CommentComponent/CommentComponent";
 import amyrobson from "./assets/avatars/amyrobson.png";
 import { useState } from "react";
+
 function App() {
   const [showReplySection, setShowReplySection] = useState(false);
   const [comment, setComment] = useState("");
@@ -12,15 +13,14 @@ function App() {
   const handleReplyClick = () => {
     setShowReplySection(!showReplySection);
   };
-
   const handleCommentChange = (e) => {
     setComment(e.target.value);
   };
   const headerContent = (
     <div className="card-header">
-      <img src="userImg" alt="imgAlt" className="avatar-img" />
-      <span className="avatar-name">userName</span>
-      <span>commentDate</span>
+      <img src={amyrobson} alt="imgAlt" className="avatar-img" />
+      <span className="avatar-name">amyrobson</span>
+      <span> april 1 2023</span>
     </div>
   );
   return (
@@ -34,8 +34,14 @@ function App() {
             handleCommentChange={handleCommentChange}
             comment={comment}
           />
-
-          <CommentComponent comment=" Impressive! Though it seems the drag feature could be improved. But overall it looks incredible. You nailed the design and the responsiveness at various breakpoints works really well." />
+          <CommentComponent userPost=" Impressive! Though it seems the drag & drop feature could be improved. But overall it looks incredible." />
+          {showReplySection && (
+            <textarea
+              value={comment}
+              onChange={handleCommentChange}
+              placeholder="Write your comment..."
+            />
+          )}
         </Card>
         <ButtonContainer initialValue={0} />
       </div>
@@ -46,21 +52,21 @@ function App() {
             userImg={amyrobson}
             commentDate="1 month ago"
           />
-          <CommentComponent comment=" Impressive! Though it seems the drag feature could be improved. But overall it looks incredible. You nailed the design and the responsiveness at various breakpoints works really well." />
+          <CommentComponent userPost=" Impressive! Though it seems the drag feature could be improved. But overall it looks incredible." />
         </Card>
         <ButtonContainer initialValue={5} />
       </div>
-      <div className="card-btn-wrapper" id="mobile-layout">
+      {/* <div className="card-btn-wrapper" id="mobile-layout">
         <Card>
           <CardHeader
             userName="amyrobson"
             userImg={amyrobson}
             commentDate="1 month ago"
           />
-          <CommentComponent comment=" Impressive! Though it seems the drag feature could be improved. But overall it looks incredible. You nailed the design and the responsiveness at various breakpoints works really well." />
+          <CommentComponent userPost=" Impressive! Though it seems the drag feature could be improved. But overall it looks incredible." />
         </Card>
         <ButtonContainer initialValue={10} />
-      </div>
+      </div> */}
     </div>
   );
 }
