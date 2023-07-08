@@ -9,12 +9,32 @@ import { useState } from "react";
 function App() {
   const [showReplySection, setShowReplySection] = useState(false);
   const [comment, setComment] = useState("");
-
+  const [comments, setComments] = useState([]);
   const handleReplyClick = () => {
     setShowReplySection(!showReplySection);
   };
   const handleCommentChange = (e) => {
     setComment(e.target.value);
+  };
+  const handleCommentSubmit = (e) => {
+    e.preventDefault();
+
+    if (comment.trim() !== "") {
+      const newComment = {
+        id: Date.now(),
+        content: comment,
+      };
+
+      setComments((prevComments) => [...prevComments, newComment]);
+      setComment("");
+    }
+  };
+  const renderComments = () => {
+    return comments.map((comment) => (
+      <div key={comment.id} className="comment">
+        {comment.content}
+      </div>
+    ));
   };
   const headerContent = (
     <div className="card-header">
@@ -32,16 +52,21 @@ function App() {
             showReplySection={showReplySection}
             handleReplyClick={handleReplyClick}
             handleCommentChange={handleCommentChange}
+            handleCommentSubmit={handleCommentSubmit}
             comment={comment}
           />
           <CommentComponent userPost=" Impressive! Though it seems the drag & drop feature could be improved. But overall it looks incredible." />
           {showReplySection && (
-            <textarea
-              value={comment}
-              onChange={handleCommentChange}
-              placeholder="Write your comment..."
-            />
+            <form onSubmit={handleCommentSubmit}>
+              <textarea
+                value={comment}
+                onChange={handleCommentChange}
+                placeholder="Write your comment..."
+              />
+              <button type="submit">Post Comment</button>
+            </form>
           )}
+          {renderComments()}
         </Card>
         <ButtonContainer initialValue={0} />
       </div>
