@@ -2,7 +2,7 @@ import "./App.css";
 import ButtonContainer from "./Components/ButtonContainer/ButtonContainer";
 import Card from "./Components/Card/Card";
 import CardHeader from "./Components/CardHeader/CardHeader";
-import CommentComponent from "./Components/CommentComponent/CommentComponent";
+import Comment from "./Components/Comment/Comment";
 import amyrobson from "./assets/avatars/amyrobson.png";
 import maxblagun from "./assets/avatars/maxblagun.png";
 function App() {
@@ -15,7 +15,7 @@ function App() {
             userImg={amyrobson}
             commentDate="3 weeks ago"
           />
-          <CommentComponent userPost=" Impressive! Though it seems the drag & drop feature could be improved. But overall it looks incredible." />
+          <Comment userPost=" Impressive! Though it seems the drag & drop feature could be improved. But overall it looks incredible." />
         </Card>
         <ButtonContainer initialValue={0} />
       </div>
@@ -26,7 +26,7 @@ function App() {
             userImg={maxblagun}
             commentDate="2 month ago"
           />
-          <CommentComponent userPost=" Impressive! Though it seems the drag feature could be improved. But overall it looks incredible." />
+          <Comment userPost=" Impressive! Though it seems the drag feature could be improved. But overall it looks incredible." />
         </Card>
         <ButtonContainer initialValue={5} />
       </div>
