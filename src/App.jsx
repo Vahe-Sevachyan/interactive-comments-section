@@ -5,6 +5,7 @@ import CardHeader from "./Components/CardHeader/CardHeader";
 import Comment from "./Components/Comment/Comment";
 import amyrobson from "./assets/avatars/amyrobson.png";
 import maxblagun from "./assets/avatars/maxblagun.png";
+import CommentBox from "./Components/CommentBox/CommentBox";
 function App() {
   return (
     <div className="container">
@@ -16,7 +17,9 @@ function App() {
             commentDate="3 weeks ago"
           />
           <Comment userPost=" Impressive! Though it seems the drag & drop feature could be improved. But overall it looks incredible." />
+          <CommentBox />
         </Card>
+
         <ButtonContainer initialValue={0} />
       </div>
       <div className="card-btn-wrapper" id="mobile-layout">
