@@ -30,6 +30,7 @@ function App() {
             commentDate="2 month ago"
           />
           <Comment userPost=" Impressive! Though it seems the drag feature could be improved. But overall it looks incredible." />
+          <CommentBox />
         </Card>
         <ButtonContainer initialValue={5} />
       </div>
